@@ -43,7 +43,7 @@ public class TodayController {
             return "redirect:/login";
         }
 
-        return "/Today_eat";
+        return "Today_eat";
     }
 
     @PostMapping("/search")
@@ -147,7 +147,7 @@ public class TodayController {
         session.setAttribute("bookmarkedRecipe", recipeDto);
 
 
-        return "/Today_eat_detail";
+        return "Today_eat_detail";
     }
 
 

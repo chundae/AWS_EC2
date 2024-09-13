@@ -48,7 +48,7 @@ public class MainController {
     public String mainSearch(@RequestParam(value = "query", required = false) String query, HttpSession session, Model model) {
         if (query == null || query.trim().isEmpty()) {
             model.addAttribute("recipes", Collections.emptyList());
-            return "/main";
+            return "main";
         }
 
         List<MongoRecipe> recipes = mainService.searchRecipes(query);
@@ -74,7 +74,7 @@ public class MainController {
             System.out.println("로그인 실패");
         }
 
-        return "/main";
+        return "main";
     }
 
 //    @GetMapping("/recipe/{recipeId}")
